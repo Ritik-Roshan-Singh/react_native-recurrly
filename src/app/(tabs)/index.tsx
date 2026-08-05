@@ -1,12 +1,10 @@
 import { Link } from "expo-router";
 
-import {  Text } from "react-native";
-import "../../../global.css";
-import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
 import { styled } from "nativewind";
+import { Text } from "react-native";
+import { SafeAreaView as RNSafeAreaView } from "react-native-safe-area-context";
+import "../../../global.css";
 const SafeAreaView = styled(RNSafeAreaView);
-
-
 
 export default function App() {
   return (
@@ -35,10 +33,10 @@ export default function App() {
         Go to Sign Up
       </Link>
 
-      <Link href="/subscription/spotify">Spotify Subscription</Link>
+      <Link href="/Subscriptions/spotify">Spotify Subscription</Link>
       <Link
         href={{
-          pathname: "/subscription/[id]",
+          pathname: "/Subscriptions/[id]",
           params: { id: "claude" },
         }}
       >
