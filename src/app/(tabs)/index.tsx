@@ -35,15 +35,15 @@ export default function App() {
         Go to Sign Up
       </Link>
 
-      <Link href="/subscription/spotify">Spotify Subscription</Link>
+      <Link href="/Subscriptions/spotify">Spotify Subscription</Link>
       <Link
         href={{
-          pathname: "/subscription/[id]",
+          pathname: "/Subscriptions/[id]",
           params: { id: "claude" },
         }}
       >
         Claude max subscription
-      </Link>
+      </Link
     </SafeAreaView>
   );
 }
