@@ -28,6 +28,7 @@ export default function App() {
 
 
 
+<<<<<<< HEAD
 
       <FlatList data={HOME_SUBSCRIPTIONS} keyExtractor={(item) => item.id} renderItem={({ item }) => (<SubscriptionCard {...item} expanded={expandedSubscriptionId === item.id} onPress={() => setExpandedSubscriptionId((currentId) => (currentId === item.id ? null : item.id))} />)}
         ListHeaderComponent={() => (
@@ -80,6 +81,17 @@ export default function App() {
       />
 
 
+=======
+      <Link href="/Subscriptions/spotify">Spotify Subscription</Link>
+      <Link
+        href={{
+          pathname: "/Subscriptions/[id]",
+          params: { id: "claude" },
+        }}
+      >
+        Claude max subscription
+      </Link
+>>>>>>> origin/dev
     </SafeAreaView>
   );
 }

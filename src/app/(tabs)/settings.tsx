@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { Text } from "react-native";
+>>>>>>> origin/dev
 import { styled } from "nativewind";
 import { Text } from "react-native";
 
