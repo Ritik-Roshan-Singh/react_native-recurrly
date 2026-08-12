@@ -88,7 +88,6 @@ const SubscriptionCard = ({
                 <Text className="sub-label">Status:</Text>
                 <Text className="sub-value" numberOfLines={1} ellipsizeMode="tail">
                   {status ? formatStatusLabel(status) : ''}
-
                 </Text>
               </View>
             </View>
