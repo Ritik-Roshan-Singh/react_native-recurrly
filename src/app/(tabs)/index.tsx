@@ -25,12 +25,20 @@ export default function App() {
 
   return (
     <SafeAreaView className="flex-1 bg-background p-5">
-
-
-
-<<<<<<< HEAD
-
-      <FlatList data={HOME_SUBSCRIPTIONS} keyExtractor={(item) => item.id} renderItem={({ item }) => (<SubscriptionCard {...item} expanded={expandedSubscriptionId === item.id} onPress={() => setExpandedSubscriptionId((currentId) => (currentId === item.id ? null : item.id))} />)}
+      <FlatList
+        data={HOME_SUBSCRIPTIONS}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <SubscriptionCard
+            {...item}
+            expanded={expandedSubscriptionId === item.id}
+            onPress={() =>
+              setExpandedSubscriptionId((currentId) =>
+                currentId === item.id ? null : item.id
+              )
+            }
+          />
+        )}
         ListHeaderComponent={() => (
           <>
             <View className="home-header">
@@ -53,7 +61,6 @@ export default function App() {
               </View>
             </View>
             <View className="mb-5">
-
               <ListHeading title="Upcoming" />
 
               <FlatList
@@ -68,30 +75,16 @@ export default function App() {
               />
             </View>
             <ListHeading title="All Subscriptions" />
-
-
           </>
         )}
         extraData={expandedSubscriptionId}
         ItemSeparatorComponent={() => <View className="h-4" />}
         showsVerticalScrollIndicator={false}
-        ListEmptyComponent={<Text className="home-empty-state">No Subscriptions yet.</Text>}
+        ListEmptyComponent={
+          <Text className="home-empty-state">No Subscriptions yet.</Text>
+        }
         contentContainerClassName="pb-30"
-
       />
-
-
-=======
-      <Link href="/Subscriptions/spotify">Spotify Subscription</Link>
-      <Link
-        href={{
-          pathname: "/Subscriptions/[id]",
-          params: { id: "claude" },
-        }}
-      >
-        Claude max subscription
-      </Link
->>>>>>> origin/dev
     </SafeAreaView>
   );
 }
